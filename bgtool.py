@@ -47,8 +47,11 @@ def combine_images(path,out,padding=1):
 
 
 for x in range(0,numout):
-    ape = random.randint(1,nfts)
+    ape = random.randint(0,nfts)
     os.system("cp PNGs/%s.png tempout/" % ape)
 
-combine_images("tempout", "out.png")
+try:
+    combine_images("tempout", sys.argv[2])
+except:
+    combine_images("tempout", "out.png")
 os.system("rm -r tempout")
