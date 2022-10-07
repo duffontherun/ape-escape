@@ -1,5 +1,3 @@
 #!/bin/bash
 while true; do
-python3 bgtool.py 4;
-muhtime=$(date +%s)
-mv out.png "BGs/$muhtime.png"; done;
+python3 bgtool.py 4 "BGs/$muhtime.png"; done;
